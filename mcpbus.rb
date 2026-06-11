@@ -5,48 +5,48 @@
 class Mcpbus < Formula
   desc "Turn any OpenAPI Spec into an MCP Server in 1 Second. MCPBus is a zero-code, standalone binary that translates REST endpoints into secure, agent-ready MCP-tools for Claude Desktop, OpenAI, and LangChain. MCPBus is a must-have tool for any Agentic AI Developer or Forward Deployed AI Engineer."
   homepage "https://mcpbus.io"
-  version "1.0.3"
+  version "1.0.6"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mcpbus-io/mcpbus/releases/download/v1.0.3/mcpbus_1.0.3_darwin_amd64.tar.gz"
-      sha256 "74054687c0f4686fad90978ea277b855bf84c825511009df6473b4fba170cc2b"
+      url "https://mcpbus-971948816739-us-west-1-an.s3.us-west-1.amazonaws.com/releases/{ .Tag }}/mcpbus_1.0.6_darwin_amd64.tar.gz"
+      sha256 "afd29334dcaa825f2715cd651c08c719e64e0a37f5c349f9a57b183d5be0d0d0"
 
       define_method(:install) do
-        bin.install "mcp-gate"
+        bin.install "mcpbus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mcpbus-io/mcpbus/releases/download/v1.0.3/mcpbus_1.0.3_darwin_arm64.tar.gz"
-      sha256 "4d407174cba72eb1a1c2114cc16135ff3dffcae9f7a5e1566c9df4a76edf1fd7"
+      url "https://mcpbus-971948816739-us-west-1-an.s3.us-west-1.amazonaws.com/releases/{ .Tag }}/mcpbus_1.0.6_darwin_arm64.tar.gz"
+      sha256 "3de5b9b31403ec2a47bce76d01b1d00fc0f79c34d03c58fc910ac52fbd8ee702"
 
       define_method(:install) do
-        bin.install "mcp-gate"
+        bin.install "mcpbus"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcpbus-io/mcpbus/releases/download/v1.0.3/mcpbus_1.0.3_linux_amd64.tar.gz"
-      sha256 "4d13b6b5e4c7ca82225a16a3184548dc7633832a5efba96a52d9fa01e3339163"
+      url "https://mcpbus-971948816739-us-west-1-an.s3.us-west-1.amazonaws.com/releases/{ .Tag }}/mcpbus_1.0.6_linux_amd64.tar.gz"
+      sha256 "d8d0635dac88a1957d00b3efa4cfacd2d4102050a2c73bcafca64e9c15c6d6e0"
       define_method(:install) do
-        bin.install "mcp-gate"
+        bin.install "mcpbus"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/mcpbus-io/mcpbus/releases/download/v1.0.3/mcpbus_1.0.3_linux_arm.tar.gz"
-      sha256 "86a3ee73bcd0b6f49684b866649c2c4094bad3ba7a805bf7398078651713e12c"
+      url "https://mcpbus-971948816739-us-west-1-an.s3.us-west-1.amazonaws.com/releases/{ .Tag }}/mcpbus_1.0.6_linux_arm.tar.gz"
+      sha256 "bf6d2b2a21e32c304e29ddb1f57560ec90e174d0e7741f93923c2208c0f900be"
       define_method(:install) do
-        bin.install "mcp-gate"
+        bin.install "mcpbus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcpbus-io/mcpbus/releases/download/v1.0.3/mcpbus_1.0.3_linux_arm64.tar.gz"
-      sha256 "77bf29e85f6c5dd51b3f416559b9feb795cf060f4d881bb19e3bb01d796c25c3"
+      url "https://mcpbus-971948816739-us-west-1-an.s3.us-west-1.amazonaws.com/releases/{ .Tag }}/mcpbus_1.0.6_linux_arm64.tar.gz"
+      sha256 "8758422473ec92788ca7b2dc40758bcd10aa826c77ff6f88a1664a23c2982725"
       define_method(:install) do
-        bin.install "mcp-gate"
+        bin.install "mcpbus"
       end
     end
   end
