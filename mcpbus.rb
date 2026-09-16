@@ -5,21 +5,21 @@
 class Mcpbus < Formula
   desc "MCPBus: Turn OpenAPI Spec into MCP Server in Code-mode. MCPBus is a must-have tool for any Agentic AI Developer or Forward Deployed AI Engineer. It is distributed as a stand alone, highly optimized binary, available for all major platforms and OS. Install the binary, run a single command, and get your MCP-server up and running in Code-mode in 1 second. No generated SDKs, no NodeJS, no Python, no VMs.'"
   homepage "https://mcpbus.io"
-  version "1.1.24"
+  version "1.2.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://downloads.mcpbus.io/releases/v1.1.24/mcpbus_1.1.24_darwin_amd64.tar.gz"
-      sha256 "90a27ff1765c0ac142951bb76d912047c7d1a839a2d3ddb9375a81c08280d44c"
+      url "https://downloads.mcpbus.io/releases/v1.2.0/mcpbus_1.2.0_darwin_amd64.tar.gz"
+      sha256 "70cf44926bcb4ebd6916720a335216662dec4c3b7b9b89c6cb5d13f9e70153ed"
 
       define_method(:install) do
         bin.install "mcpbus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://downloads.mcpbus.io/releases/v1.1.24/mcpbus_1.1.24_darwin_arm64.tar.gz"
-      sha256 "c41057d950a8874631dc8856648fec7cad94f8177773a3b9bd00aa5b1f5136c4"
+      url "https://downloads.mcpbus.io/releases/v1.2.0/mcpbus_1.2.0_darwin_arm64.tar.gz"
+      sha256 "1da070c2ac5e1796b5a78e34ab6d31b25b3a9e34768dba3abb8d682cf2f2f318"
 
       define_method(:install) do
         bin.install "mcpbus"
@@ -29,22 +29,22 @@ class Mcpbus < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://downloads.mcpbus.io/releases/v1.1.24/mcpbus_1.1.24_linux_amd64.tar.gz"
-      sha256 "f7d35f0d90b6de05df7e529af19ee7ae8d35e02c2fa77d3203b166e6d78068dd"
+      url "https://downloads.mcpbus.io/releases/v1.2.0/mcpbus_1.2.0_linux_amd64.tar.gz"
+      sha256 "391c422fcdd07c5aceca9fb4105728301a4443c56d513642f1dae0a3e3fb38c5"
       define_method(:install) do
         bin.install "mcpbus"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://downloads.mcpbus.io/releases/v1.1.24/mcpbus_1.1.24_linux_arm.tar.gz"
-      sha256 "14e74dc3fd1b3d1f920e0618ff2a67036d7378fb98d51beb4ec1dfcca124a69e"
+      url "https://downloads.mcpbus.io/releases/v1.2.0/mcpbus_1.2.0_linux_arm.tar.gz"
+      sha256 "4106f67d4a7443529c29d896252dbe6acdbd185c786486acce69b29a3c9a6bc6"
       define_method(:install) do
         bin.install "mcpbus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://downloads.mcpbus.io/releases/v1.1.24/mcpbus_1.1.24_linux_arm64.tar.gz"
-      sha256 "c6cc341399334f2a49d7ecdab5a65b0572d8d799aaf40b10a9c4a829fc245654"
+      url "https://downloads.mcpbus.io/releases/v1.2.0/mcpbus_1.2.0_linux_arm64.tar.gz"
+      sha256 "225bf4f8750b9a68f46eebc27d3710fbbf87682f4a9656bbf9499b06e7a0e999"
       define_method(:install) do
         bin.install "mcpbus"
       end
